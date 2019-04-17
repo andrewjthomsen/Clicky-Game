@@ -1,4 +1,16 @@
-.App {
+
+.wrapper {
+  padding-top: 50px;
+  background: #ECEFF1;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  justify-content: space-around;
+  align-content: flex-start;
+  overflow: auto;
+}
+/* .App {
   text-align: center;
 }
 
@@ -30,4 +42,6 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
+/* This handles getting rid of grid layout and simply preventing overflow of rows by dropping any
+remainders to another column. Overflow auto is the key component responsible for preventing row overflow */

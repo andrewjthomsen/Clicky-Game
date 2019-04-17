@@ -3,7 +3,8 @@
 import * as React from "react"
 // stateless functional component that returns html (jsx)
 const Header = (props) => {
-    return (<h1>This is working!</h1>);
+    return (<div><h1>This is working!</h1>
+        <h2>Score:{props.score}</h2></div>);
 }
 
 export default Header;
