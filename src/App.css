@@ -1,4 +1,10 @@
-
+/* Goals for design:
+1. Style heading (possibly a banner)
+2. Add borders, spacing, padding, and margins
+3. Add solid colors for header and text
+4. Have layered images that make up the background layer, content layer, and text layers (2-3 layers)
+5. Pick a color theme
+6. Pick a font to use universally throughout app */
 .wrapper {
   padding-top: 50px;
   background: #ECEFF1;
@@ -6,10 +12,72 @@
   display: flex;
   flex-flow: row wrap;
   padding: 20px;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-content: flex-start;
   overflow: auto;
+  min-width: 0;
+  padding: -5px;
 }
+.wrapper img {
+  flex: 1 1 15%;
+  width: 250px;
+  height: 250px;
+  margin: 5px;
+}
+/* Code I want to add for background animated css */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #191A1C;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/242759/cplogo.svg);
+  background-size: 120px 60px;
+  background-position: round;
+  position: relative;
+}
+
+.header {
+  background: #ECEFF1;
+}
+
+/* body::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 120%;
+  margin: -20px 0 0 60px;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/242759/cplogo.svg);
+  background-size: 120px 60px;
+  z-index: -1;
+}
+body::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  top: 0;
+  right: 100vw;
+  background: linear-gradient(95deg, rgba(32, 33, 36, 0) 0%, rgba(32, 33, 36, 1) 45%, rgba(32, 33, 36, 1) 50%, rgba(32, 33, 36, 0.8) 55%, rgb(32, 33, 36, 0) 100%);
+  mix-blend-mode: difference;
+  opacity: 1;
+  animation: swoosh 5s linear infinite;
+}
+
+@keyframes swoosh {
+  0% {
+    right: 100vw;
+  }
+  100% {
+    right: -100vw;
+  }
+} */
+/* ================================= */
 /* .App {
   text-align: center;
 }

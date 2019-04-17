@@ -11,8 +11,8 @@ const Grid = props => {
   // Render new div, new column, new card. Grab source and create card from it
   
   return props.images.map((image, index) => {
-    return (<Card image={image} key={index} />)
-  });
+    return (<Card image={image} key={index} onClick={() => { props.onImageClick(index) }} />)
+  });// needs an event for card itself for an onclick event
 };
 
 export default Grid;

@@ -3,7 +3,7 @@
 import * as React from "react"
 // stateless functional component that returns html (jsx)
 const Card = (props) => {
-    return (<img src={props.image.url} height="100px" width="100px"></img>)
+    return (<img src={props.image.url} height="100px" width="100px" onClick={props.onClick}></img>)
 
 }
 
