@@ -90,13 +90,17 @@ class App extends Component {// app is a child of component
   }
   render() {
     return (
-      <div>
+      <div className = "container">
+        <div className = "header">
         <Header score={this.state.score}/>
-        <div className="wrapper">
-          <Grid images={this.state.images} onImageClick={this.imageClickHandler} />
         </div>
-      </div>
-    );
+        <div className="wrapper">
+          <div className="content">
+            <Grid images={this.state.images} onImageClick={this.imageClickHandler} />          
+          </div>
+        </div>
+      </div> 
+      );
   }
 }
 //create a score componeent to dynamically change the score
