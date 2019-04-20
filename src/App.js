@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/header/index.js';
+import Banner from './components/banner/index.js';
 import Grid from './components/layout/index.js';
 import imageData from '../src/imageData.js';
 
@@ -92,8 +93,9 @@ class App extends Component {// app is a child of component
     return (
       <div className = "container">
         <div className = "header">
-        <Header score={this.state.score}/>
+          <Header score={this.state.score}/>
         </div>
+        <Banner header="Click Game!" subheader="Click on an image to earn a point, but don't click anything twice!" />
         <div className="wrapper">
           <div className="content">
             <Grid images={this.state.images} onImageClick={this.imageClickHandler} />          
